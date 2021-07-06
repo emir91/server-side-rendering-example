@@ -1,6 +1,6 @@
 import React from 'react';
 
-const App = ({questions, answers}) => {
+const App = ({questions, answers, handleModifyAnswerVotes}) => {
     return (
         <div>
             <h1>Q&A Tool</h1>
@@ -10,15 +10,15 @@ const App = ({questions, answers}) => {
                   <div>
                     {answers
                         .filter(answer => answer.questionId === questionId)
-                        .map(({answerId, upvote, content}) => (
+                        .map(({answerId, upvotes, content}) => (
                             <div key={answerId}>
-                                 <span>{content} - {upvote}</span>
+                                 <span>{content} - {upvotes}</span>
+                                 <button onClick={() => handleModifyAnswerVotes(answerId, 1)}>+</button>
+                                 <button onClick={() => handleModifyAnswerVotes(answerId, -1)}>-</button>
                             </div>
                          ))}
                   </div>
               </div>
-              
-              
           ))} 
         </div>
     );
