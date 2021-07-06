@@ -12,15 +12,13 @@ fetch('http://localhost:3000/data')
         render();
     });
 
-    function handleVote(answerId, increment){
-
-        state.answers = handleModifyAnswerVotes(state.answers, answerId, increment);
+function handleVote(answerId, increment){
+    state.answers = handleModifyAnswerVotes(state.answers, answerId, increment);
+    fetch(`vote/${answerId}?increment=${increment}`);
     
-        fetch(`vote/${answerId}?increment=${increment}`);
+    render();
     
-        render();
-    
-    };
+};
     
 
 function render() {
