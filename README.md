@@ -1,6 +1,6 @@
 # Q&A Tool
 
-This simple application serves a server-rendered React application to the client. The application is made up of only a single component, but has full interactivity. It displays data fetched from fake db. The data are some IT related questions which you can upvote for.
+This simple application serves a server-rendered React application to the client. The application is made up of only a single component, but has full interactivity. It displays data fetched from fake db. The data are some IT related questions which you can upvote for and the data are presisted on the page even after page refresh.
 
 Things that I cover in this project includes:
 
